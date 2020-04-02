@@ -1,0 +1,38 @@
+<h1>Ctm</h1>
+
+<!--Centriamo la mappa alle nostre coordinate-->
+<agm-map [latitude]="lat" [longitude]="lng">
+  <!--Mettiamo un marker alle nostre coordinate-->
+
+  <agm-marker [latitude]="latCasa" [longitude]="lngCasa">
+  </agm-marker>
+  <agm-circle [latitude]="latCasa" [longitude]="lngCasa"
+      [radius]="5000"
+      [fillColor]="colore">
+  </agm-circle>
+  <agm-marker [latitude]="latCasa" [longitude]="lngCasa" [iconUrl]="icon"></agm-marker>
+  <agm-marker [latitude]="latCane" [longitude]="lngCane" [iconUrl]="cane"></agm-marker>
+  <agm-marker [latitude]="latCuore" [longitude]="lngCuore" [iconUrl]="cuore"></agm-marker>
+  <agm-marker [latitude]="latemoji" [longitude]="lngemoji" [iconUrl]="emoji"></agm-marker>
+
+  <agm-marker [latitude]="lat" [longitude]="lng">
+  </agm-marker>
+   <agm-circle [latitude]="lat" [longitude]="lng"
+      [radius]="5000"
+      [fillColor]="colore">
+  </agm-circle>
+
+  <agm-polygon [paths]="triangle" [fillColor]="'red'"></agm-polygon>
+  <agm-polygon [paths]="rectangle" [fillColor]="coloreRet"></agm-polygon>
+
+</agm-map>
+
+<h1>Cambia il colore delle zone</h1>
+<input type="button" value="rosso" (click)="rosso()">
+<input type="button" value="giallo" (click)="giallo()">
+<input type="button" value="verde" (click)="verde()">
+
+<h1>Cambia il colore del Rettangolo</h1>
+<input type="button" value="rosso" (click)="rossoRet()">
+<input type="button" value="giallo" (click)="gialloRet()">
+<input type="button" value="verde" (click)="verdeRet()">
